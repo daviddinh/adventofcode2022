@@ -8,4 +8,9 @@ let calories = require("fs")
       .reduce((a, b) => a + b),
   );
 
-console.log(Math.max(...calories));
+console.log(
+  calories
+    .sort((a, b) => b - a)
+    .slice(0, 3)
+    .reduce((a, b) => a + b),
+);
